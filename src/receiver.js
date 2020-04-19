@@ -6,13 +6,13 @@ const Converter = require('@iota/converter')
 const provider = 'https://nodes.devnet.iota.org:443'
 
 // root of the message stream
-const root = 'SHR9JEKCJSJBT9SHZRCFKZAJRFGBOPYPDDYRQKISATTWJMKSSBKTUWMJKCVTAABFM9MJLKERFMPUICIZI'
+const root = 'WRDQIUYABAXBPGPFQKNFGJTXYZDPRH9ZSZIE9MAUHMRRHOTUJVCLPOWXWIQDHIDWDTBCYWATGKXSXOVDY'
 
 // set mode
 const mode = "public" // public | private | restriced
 
 // set side key
-const sideKey = 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'
+const sideKey = 'SLAWX9UKDHUZFOGRDXPCTFDSLHJURDABLT9CJZNTIKE9TQEWGKIHZXKMLDHJSSJG9RGYMN9IHPELMSPHV'
 
 // initalize MAM state
 let state = Mam.init(provider)
@@ -47,4 +47,8 @@ function logger(data) {
 
 // receive messages
 receiveMessage(root)
+
+// assignment: 
+// * Expand receiver.js so that new data is continuously queried and displayed. 
+// * Call Mam.fetch() with a callback function.
 

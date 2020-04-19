@@ -1,21 +1,20 @@
 // require IOTA Modules
 const Mam = require('@iota/mam')                // Masked Authenticated Messaging client library 
-// const Converter = require('@iota/converter')
+const Converter = require('@iota/converter')
 
 // IOTA API entry point
 const provider = 'https://nodes.devnet.iota.org:443'
 
 // set mode
-// const mode = "public" // public | private | restriced
+const mode = "public" // public | private | restriced
 
 // set side key
-// const sideKey = 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'
+const sideKey = 'SLAWX9UKDHUZFOGRDXPCTFDSLHJURDABLT9CJZNTIKE9TQEWGKIHZXKMLDHJSSJG9RGYMN9IHPELMSPHV'
 
 // initalize MAM state
 let state = Mam.init(provider)
-console.log(state)
+// console.log(state)
 
-/*
 // set proper mode
 if (mode == 'private') {
     Mam.changeMode(state, 'private')
@@ -33,7 +32,7 @@ const publish = async function(packet) {
 
     // set new state
     state = message.state
-    //console.log(state)
+    // console.log(state)
 
     // attach message to tangle and wait for it
     await Mam.attach(message.payload, message.address)
@@ -42,6 +41,8 @@ const publish = async function(packet) {
     // return new root
     return message.root
 }
+
+// publish('**ping**')
 
 // create random sensor data
 const sensorData = () => {
@@ -53,4 +54,4 @@ setInterval(() => {
     publish(sensorData())
 }, 10000)
 
-*/
+
